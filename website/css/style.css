@@ -821,6 +821,117 @@ body::after {
 .footer-bottom p { font-size: 0.78rem; color: rgba(238, 242, 247, 0.18); }
 
 /* ─────────────────────────────────────────
+   PAGE HERO & CTA UTILITIES
+───────────────────────────────────────── */
+/* Page hero — used on all inner pages */
+.page-hero {
+  padding: 10rem 5rem 6rem;
+  background: var(--navy-deep);
+  position: relative;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 5rem;
+  width: 44px; height: 3px;
+  background: var(--crimson);
+}
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.page-hero-title em { font-style: italic; color: var(--gold-light); }
+.page-hero-sub {
+  font-family: var(--font-cond);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  max-width: 55ch;
+}
+
+/* CTA strip — reusable across pages */
+.cta-strip {
+  background: var(--crimson);
+  padding: 4rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cta-strip-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 300;
+  color: var(--white);
+}
+.btn-white {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--white);
+  color: var(--crimson);
+  font-family: var(--font-cond);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-white:hover { background: var(--off-white); }
+
+/* Portfolio grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.portfolio-card { background: var(--dark); overflow: hidden; }
+.portfolio-card:hover .portfolio-thumb { transform: scale(1.03); }
+.portfolio-thumb-wrap { overflow: hidden; aspect-ratio: 4/3; }
+.portfolio-thumb {
+  width: 100%; height: 100%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s var(--ease-out);
+}
+.portfolio-thumb span {
+  font-family: var(--font-cond);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(238,242,247,0.2);
+}
+.portfolio-card-body { padding: 1.8rem 2rem; }
+.portfolio-card-category {
+  font-family: var(--font-cond);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 0.5rem;
+}
+.portfolio-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--off-white);
+  margin-bottom: 0.4rem;
+}
+.portfolio-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────
    KEYFRAMES
 ───────────────────────────────────────── */
 @keyframes fadeUp {
@@ -849,6 +960,10 @@ body::after {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .nav-links, .nav-quote { display: none; }
   .nav-hamburger { display: flex; }
+  .page-hero { padding: 9rem 3rem 5rem; }
+  .page-hero::after { left: 3rem; }
+  .cta-strip { padding: 3rem; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -861,4 +976,8 @@ body::after {
   .footer-bottom { flex-direction: column; text-align: center; }
   .clients-inner { flex-direction: column; align-items: flex-start; }
   .clients-names { gap: 2rem; }
+  .page-hero { padding: 8rem 1.5rem 4rem; }
+  .page-hero::after { left: 1.5rem; }
+  .cta-strip { padding: 2.5rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .portfolio-grid { grid-template-columns: 1fr; }
 }
