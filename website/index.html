@@ -4,22 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Leather Craft Ventures Ltd — Nigeria's specialists in premium leather boots, school uniforms, knitted collars, and corporate monogramming. Trusted by Radisson Blu, G4S, UAC and more." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'self';" />
+  <link rel="canonical" href="https://leathercraftventures.com/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Leather Craft Ventures Ltd — Crafting Excellence" />
+  <meta property="og:description" content="Nigeria's specialists in premium leather boots, school uniforms, knitted collars, and corporate monogramming. Trusted by Radisson Blu, G4S, UAC and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://leathercraftventures.com/" />
+  <meta property="og:image" content="https://leathercraftventures.com/images/og-image.jpg" />
+  
   <title>Leather Craft Ventures Ltd — Crafting Excellence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Leather Craft Ventures Ltd",
+    "description": "Premium leather boots, school uniforms, knitted collars, and corporate monogramming manufacturer in Nigeria",
+    "url": "https://leathercraftventures.com",
+    "logo": "https://leathercraftventures.com/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NG"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service"
+    },
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ═══════════════ NAV ═══════════════ -->
 <nav id="site-nav" role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-logo">
-    <span class="nav-logo-main">
-      <span class="nav-leather">Leather</span>
-      <span class="nav-craft">Craft</span>
-    </span>
-    
+    <img src="images/lc.jpeg" alt="Leather Craft Ventures Ltd" style="height: 60px; width: auto;" />
   </a>
   <ul class="nav-links" role="list">
     <li><a href="about.html">About Us</a></li>
@@ -44,6 +74,7 @@
 </div>
 
 <!-- ═══════════════ HERO ═══════════════ -->
+<main id="main-content">
 <section id="hero" aria-label="Hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Premium Manufacturing</p>
@@ -57,30 +88,60 @@
       <a href="contact.html" class="btn-primary">Request a Quote</a>
       <a href="services.html" class="btn-outline">Explore Services</a>
     </div>
+    
+    <!-- Made in Nigeria Badge -->
+    <div style="margin-top: 2rem; display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.6rem 1.2rem; background: rgba(200,160,90,0.15); border: 1px solid rgba(200,160,90,0.3); border-radius: 50px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold);">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      <span style="font-family: var(--font-cond); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);">Made in Nigeria · Quality Certified</span>
+    </div>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-right-pattern"></div>
+
+    <!-- Icons — bottom left -->
+    <div class="hero-icon-grid">
+      <div class="hero-icon-cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+          <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/>
+        </svg>
+      </div>
+      <div class="hero-icon-cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 19h16M4 19V9l4-5h4v7h4l2 3v5"/>
+        </svg>
+      </div>
+      <div class="hero-icon-cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10a1 1 0 001 1h10a1 1 0 001-1V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
+        </svg>
+      </div>
+      <div class="hero-icon-cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="9" width="20" height="9" rx="1"/>
+          <path d="M12 2v7M8 18v2M16 18v2M7 13h10"/>
+          <circle cx="17" cy="13" r="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Stats — bottom right -->
     <div class="hero-stats">
       <div class="hero-stat-item">
         <span class="hero-stat-num">10+</span>
-        <span class="hero-stat-label">Years of<br>Experience</span>
+        <span class="hero-stat-label">Years Experience</span>
       </div>
       <div class="hero-stat-item">
         <span class="hero-stat-num">5+</span>
-        <span class="hero-stat-label">Major<br>Clients</span>
+        <span class="hero-stat-label">Major Clients</span>
       </div>
       <div class="hero-stat-item">
         <span class="hero-stat-num">4</span>
-        <span class="hero-stat-label">Product<br>Lines</span>
+        <span class="hero-stat-label">Product Lines</span>
       </div>
     </div>
-    <div class="hero-icon-grid">
-      <div class="hero-icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg></div>
-      <div class="hero-icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19h16M4 19V9l4-5h4v7h4l2 3v5"/></svg></div>
-      <div class="hero-icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10a1 1 0 001 1h10a1 1 0 001-1V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg></div>
-      <div class="hero-icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="9" width="20" height="9" rx="1"/><path d="M12 2v7M8 18v2M16 18v2M7 13h10"/><circle cx="17" cy="13" r="1" fill="currentColor"/></svg></div>
-    </div>
-    <div class="hero-stamp"><p>Made in<br>Nigeria</p></div>
+
   </div>
 </section>
 
@@ -132,8 +193,63 @@
 </section>
 
 <!-- ═══════════════ CLIENTS ═══════════════ -->
-<section aria-label="Trusted clients" style="background: var(--off-white); padding: 5rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section aria-label="Trusted clients" style="background: var(--off-white); padding: 5rem 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+      <p class="section-label">Trusted By</p>
+      <h2 class="section-title">Leading institutions<br><em>across Nigeria</em></h2>
+    </div>
+    <div class="clients-grid reveal">
+      <div class="client-logo">Radisson Blu</div>
+      <div class="client-logo">G4S</div>
+      <div class="client-logo">UAC</div>
+      <div class="client-logo">Leading Schools</div>
+      <div class="client-logo">Corporate Partners</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section aria-label="Call to action" style="background: var(--navy); color: var(--white); padding: 5rem 2rem; text-align: center;">
+  <div class="container reveal">
+    <h2 class="section-title" style="color: var(--white); margin-bottom: 1.5rem;">Ready to start<br><em>your project?</em></h2>
+    <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">Get in touch with our team to discuss your requirements and receive a detailed quote.</p>
+    <a href="contact.html" class="btn-primary">Request a Quote</a>
+  </div>
+</section>
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer role="contentinfo" style="background: var(--charcoal); color: var(--white); padding: 3rem 2rem 1.5rem;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      <div>
+        <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Leather Craft Ventures</h3>
+        <p style="opacity: 0.8; font-size: 0.9rem;">Crafting excellence in leather goods and uniforms since 2013.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1rem; font-size: 1rem;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--white); opacity: 0.8; text-decoration: none;">About Us</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="services.html" style="color: var(--white); opacity: 0.8; text-decoration: none;">Services</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="portfolio.html" style="color: var(--white); opacity: 0.8; text-decoration: none;">Portfolio</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--white); opacity: 0.8; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1rem; font-size: 1rem;">Contact</h4>
+        <p style="opacity: 0.8; font-size: 0.9rem;">Lagos, Nigeria<br>Email: info@leathercraftventures.com</p>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; opacity: 0.7; font-size: 0.85rem;">
+      <p>&copy; 2024 Leather Craft Ventures Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>ontainer">
     <div class="clients-inner reveal">
       <p class="clients-heading">Trusted by</p>
       <ul class="clients-names" role="list">
@@ -209,7 +325,7 @@
       <div>
         <p class="footer-brand-name"><span class="footer-leather">Leather</span> <span class="footer-craft">Craft</span> Ventures Ltd</p>
         <p class="footer-brand-tag">Crafting Excellence · Nigeria</p>
-        <p class="footer-brand-blurb">Premium leather goods, school uniforms, and corporate apparel manufacturing. Built with care in Arepo, Ogun State, Nigeria.</p>
+        <p class="footer-brand-blurb">Premium leather goods, school uniforms, and corporate apparel manufacturing. Built with care in Nigeria.</p>
       </div>
       <nav class="footer-col" aria-label="Services navigation">
         <h4>Services</h4>
