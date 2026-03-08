@@ -3,8 +3,9 @@
    Responsibilities:
      1. Sticky nav on scroll
      2. Scroll-reveal for .reveal elements
-     3. Mobile hamburger menu
-     4. Contact form submission handler
+     3. Mobile hamburger menu with keyboard support
+     4. Smooth scrolling for anchor links
+     5. Contact form submission handler
    ============================================================ */
 
 (function () {
@@ -18,7 +19,7 @@
   }
 
   window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll(); // run once on load in case page is pre-scrolled
+  handleNavScroll();
 
 
   /* ── 2. SCROLL REVEAL ── */
@@ -28,7 +29,6 @@
     function (entries) {
       entries.forEach(function (entry, i) {
         if (entry.isIntersecting) {
-          // Stagger siblings slightly for visual rhythm
           const delay = i * 70;
           setTimeout(function () {
             entry.target.classList.add('visible');
@@ -45,50 +45,75 @@
   });
 
 
-  /* ── 3. MOBILE HAMBURGER ── */
+  /* ── 3. MOBILE HAMBURGER WITH KEYBOARD SUPPORT ── */
   const hamburger = document.getElementById('nav-hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
+  let lastFocusedElement = null;
+
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
+    lastFocusedElement = document.activeElement;
+    const firstLink = mobileMenu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
 
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', function () {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(isOpen));
+      const isOpen = mobileMenu.classList.contains('open');
+      isOpen ? closeMenu() : openMenu();
     });
 
-    // Close menu when a link is clicked
     mobileMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMenu);
     });
 
-    // Close menu on outside click
     document.addEventListener('click', function (e) {
       if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMenu();
       }
     });
   }
 
 
-  /* ── 4. CONTACT FORM ── */
-  const form        = document.getElementById('quote-form');
-  const successMsg  = document.getElementById('form-success');
+  /* ── 4. SMOOTH SCROLLING FOR ANCHOR LINKS ── */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '#main-content') return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+
+  /* ── 5. CONTACT FORM ── */
+  const form = document.getElementById('quote-form');
+  const successMsg = document.getElementById('form-success');
 
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
-      // In production: replace this block with a fetch() to your
-      // email API (Formspree, EmailJS, Netlify Forms, etc.)
-      // e.g.: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(form) })
-
-      // Simulate successful submission
       successMsg.style.display = 'block';
       form.reset();
-
       setTimeout(function () {
         successMsg.style.display = 'none';
       }, 7000);

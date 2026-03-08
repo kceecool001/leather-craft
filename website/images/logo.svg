@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" fill="none">
+  <!-- Decorative shield background -->
+  <path d="M 30 20 L 280 20 L 300 40 L 300 140 L 280 160 L 30 160 L 10 140 L 10 40 Z" fill="#1B4882" opacity="0.08"/>
+  
+  <!-- Left decorative line -->
+  <line x1="10" y1="90" x2="30" y2="90" stroke="#C8A05A" stroke-width="3"/>
+  
+  <!-- LEATHER text with shadow effect -->
+  <text x="50" y="75" font-family="'Cormorant Garamond', serif" font-size="56" font-weight="700" letter-spacing="4" fill="#102B55" opacity="0.15">LEATHER</text>
+  <text x="48" y="73" font-family="'Cormorant Garamond', serif" font-size="56" font-weight="700" letter-spacing="4" fill="#1B4882">LEATHER</text>
+  
+  <!-- Decorative diamond separator -->
+  <g transform="translate(320, 90)">
+    <rect x="-6" y="-6" width="12" height="12" fill="#C8A05A" transform="rotate(45)"/>
+    <rect x="-4" y="-4" width="8" height="8" fill="#CE2939" transform="rotate(45)"/>
+  </g>
+  
+  <!-- CRAFT text with shadow effect -->
+  <text x="352" y="75" font-family="'Cormorant Garamond', serif" font-size="56" font-weight="700" letter-spacing="4" fill="#A81F2D" opacity="0.15">CRAFT</text>
+  <text x="350" y="73" font-family="'Cormorant Garamond', serif" font-size="56" font-weight="700" letter-spacing="4" fill="#CE2939">CRAFT</text>
+  
+  <!-- Right decorative line -->
+  <line x1="540" y1="90" x2="560" y2="90" stroke="#C8A05A" stroke-width="3"/>
+  
+  <!-- Bottom decorative elements -->
+  <g transform="translate(50, 110)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#C8A05A" stroke-width="1" opacity="0.5"/>
+    <circle cx="90" cy="0" r="3" fill="#C8A05A"/>
+  </g>
+  
+  <g transform="translate(350, 110)">
+    <line x1="0" y1="0" x2="140" y2="0" stroke="#C8A05A" stroke-width="1" opacity="0.5"/>
+    <circle cx="70" cy="0" r="3" fill="#C8A05A"/>
+  </g>
+  
+  <!-- VENTURES LTD with decorative styling -->
+  <text x="50" y="140" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="600" letter-spacing="8" fill="#1B4882" opacity="0.6">VENTURES</text>
+  <text x="350" y="140" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="600" letter-spacing="8" fill="#CE2939" opacity="0.6">LTD</text>
+  
+  <!-- Top accent stars -->
+  <g transform="translate(285, 35)">
+    <path d="M0-4 L1-1 L4-1 L2 1 L3 4 L0 2 L-3 4 L-2 1 L-4-1 L-1-1 Z" fill="#C8A05A" opacity="0.7"/>
+  </g>
+  
+  <g transform="translate(335, 35)">
+    <path d="M0-4 L1-1 L4-1 L2 1 L3 4 L0 2 L-3 4 L-2 1 L-4-1 L-1-1 Z" fill="#C8A05A" opacity="0.7"/>
+  </g>
+  
+  <!-- Subtle corner flourishes -->
+  <path d="M 40 25 Q 35 25 35 30" stroke="#C8A05A" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 530 25 Q 535 25 535 30" stroke="#C8A05A" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 40 155 Q 35 155 35 150" stroke="#C8A05A" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 530 155 Q 535 155 535 150" stroke="#C8A05A" stroke-width="1.5" fill="none" opacity="0.4"/>
+</svg>
